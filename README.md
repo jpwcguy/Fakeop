@@ -4,6 +4,10 @@ Troll your friends with this minecraft plugin
 
 ![img.png](img.png)
 
+# Permissions:
+
+fakeop.command - all command + arguments (SUBJECT TO CHANGE)
+
 # Usages:
 
 /fakeop \<player\> [-v (broadcast)]
