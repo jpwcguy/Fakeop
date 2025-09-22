@@ -1,5 +1,7 @@
 # Fakeop
 
+https://www.spigotmc.org/resources/fakeop.128986/
+
 Troll your friends with this minecraft plugin
 
 Detailed Usages:
