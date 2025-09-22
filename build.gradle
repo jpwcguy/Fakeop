@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'net.minefortune'
-version = '1.0-RELEASE'
+version = '1.1-RELEASE'
 
 repositories {
     mavenCentral()
@@ -16,6 +16,7 @@ repositories {
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.18.2-R0.1-SNAPSHOT")
+    compileOnly 'net.dmulloy2:ProtocolLib:5.4.0'
 }
 
 tasks {

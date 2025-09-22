@@ -13,7 +13,7 @@ import java.util.List;
 
 public class FakeOpCommand implements CommandExecutor, TabCompleter {
     @Override
-    public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 0) return false;
         Player player = Bukkit.getPlayer(args[0]);
         if (player != null) {
@@ -23,18 +23,18 @@ public class FakeOpCommand implements CommandExecutor, TabCompleter {
                 } else return false;
             } else {
                 player.sendMessage(ChatColor.WHITE + "Made " + player.getName() + " a server operator");
-                if (!player.getName().equals(commandSender.getName()))
-                    commandSender.sendMessage(ChatColor.WHITE + "Made " + player.getName() + " a server operator" + ChatColor.DARK_PURPLE + " (Sent to player " + player.getName() + ")");
+                if (!player.getName().equals(sender.getName()))
+                    sender.sendMessage(ChatColor.WHITE + "Made " + player.getName() + " a server operator" + ChatColor.DARK_PURPLE + " (Sent to player " + player.getName() + ")");
             }
 
         } else {
-            commandSender.sendMessage(ChatColor.RED + "Player not found.");
+            sender.sendMessage(ChatColor.RED + "Player not found.");
         }
         return true;
     }
 
     @Override
-    public List<String> onTabComplete(CommandSender commandSender, Command command, String label, String[] args) {
+    public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 1) {
             List<String> list = new ArrayList<>();
             Bukkit.getOnlinePlayers().forEach((player) -> list.add(player.getName()));
