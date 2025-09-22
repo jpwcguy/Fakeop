@@ -21,6 +21,8 @@ FakeItem utilizes ProtocolLib's SET_SLOT packet to make the client think that th
 a new item. This "new" item is what I call a ghost item, when the player does anything that updates their inventory the
 item goes into thin air, this is safe and not at all dangerous to do as the client never actually recieves an item.
 
+#### PS: HOLD THE ITEM YOU WANT TO MAKE A GHOST ITEM WHEN RUNNING THE COMMAND
+
 NOTE: if the targetted user is in creative mode the item may stay in the inventory, as creative mode can save items (
 like hotbar slots). also dont get creative mode confused with FakeGamemode as fakegamemode will not save the items and
 will have the same restrictions as the "real" gamemode.
