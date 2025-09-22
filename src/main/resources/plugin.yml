@@ -1,0 +1,10 @@
+name: Fakeop
+version: '1.0-SNAPSHOT'
+main: net.minefortune.fakeop.Fakeop
+api-version: '1.18'
+authors: [ jpwcguy ]
+description: Your friends think theyre opped! (Theyre not)
+commands:
+  fakeop:
+    permission: fakeop.command
+    usage: "/fakeop <player> [-v (broadcast)]"
