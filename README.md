@@ -6,7 +6,7 @@ Troll your friends with this minecraft plugin
 
 ## ReadmeQuickly
 
-Fakegamemode REQUIRED PROTOCOLLIB to work, if the command /fakegamemode returns unknown command then you do NOT have a
+Fakegamemode REQUIRES PROTOCOLLIB to work, if the command /fakegamemode returns unknown command then you do NOT have a
 working protocollib working on your server.
 Official protocollib: https://github.com/dmulloy2/ProtocolLib
 
