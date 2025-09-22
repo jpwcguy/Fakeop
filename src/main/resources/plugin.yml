@@ -1,11 +1,14 @@
 name: Fakeop
-version: '1.1-Release'
+version: '1.2-Release'
 main: net.minefortune.fakeop.Fakeop
 api-version: '1.18'
 authors: [ jpwcguy ]
 description: Your friends think theyre opped! (Theyre not)
 softdepend: [ ProtocolLib ]
 commands:
+  fakeitem:
+    permission: fakeop.item
+    usage: "/fakeitem <player>"
   fakegamemode:
     permission: fakeop.gamemode
     usage: "/fakegamemode <gamemode> [player]"

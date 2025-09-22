@@ -16,6 +16,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FakeGamemodeCommand implements CommandExecutor, TabCompleter {
+    public static String capitalizeFirst(String input) {
+        if (input == null || input.isEmpty()) {
+            return input;
+        }
+        return input.substring(0, 1).toUpperCase() + input.substring(1).toLowerCase();
+    }
+
     @Deprecated // it's not doe
     public void sendFakeGamemode(Player player, GameMode gamemode) {
         try {
@@ -56,13 +63,12 @@ public class FakeGamemodeCommand implements CommandExecutor, TabCompleter {
         sendFakeGamemode(player, gameMode);
         player.setAllowFlight(false);
         player.setFlying(false);
-        player.sendMessage(ChatColor.WHITE + "Set your game mode to " + gameMode.name() + " Mode");
+        player.sendMessage(ChatColor.WHITE + "Set your game mode to " + capitalizeFirst(gameMode.name()) + " Mode");
         if (!player.equals(sender)) {
-            sender.sendMessage(ChatColor.WHITE + "Set " + player.getName() + " game mode to " + gameMode.name() + " Mode" + ChatColor.DARK_PURPLE + " (Sent to player " + player.getName() + ")");
+            sender.sendMessage(ChatColor.WHITE + "Set " + player.getName() + " game mode to " + capitalizeFirst(gameMode.name()) + " Mode" + ChatColor.DARK_PURPLE + " (Sent to player " + player.getName() + ")");
         }
         return true;
     }
-
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
