@@ -19,7 +19,7 @@ public class FakeOpCommand implements CommandExecutor, TabCompleter {
         if (player != null) {
             if (args.length == 2) {
                 if (args[1].equalsIgnoreCase("-v")) {
-                    Bukkit.getOnlinePlayers().forEach(onlineplayer -> onlineplayer.sendMessage(ChatColor.WHITE + "Made " + onlineplayer.getName() + " a server operator"));
+                    Bukkit.getOnlinePlayers().forEach(onlineplayer -> onlineplayer.sendMessage(ChatColor.WHITE + "Made " + player.getName() + " a server operator"));
                 } else return false;
             } else {
                 player.sendMessage(ChatColor.WHITE + "Made " + player.getName() + " a server operator");
