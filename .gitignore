@@ -5,6 +5,8 @@
 *.ipr
 *.iws
 
+build/
+.gradle/
 # IntelliJ
 out/
 # mpeltonen/sbt-idea plugin
@@ -101,7 +103,6 @@ $RECYCLE.BIN/
 *.lnk
 
 .gradle
-build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
